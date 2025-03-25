@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="ttps://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple">
+    <link rel="stylesheet" href="ttps://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body onscroll="scrolling()" style="background-image: url('static/images/backpicture.jpg'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+    <!--navigation -->
+
+    <div class="nav">
+        <h1>Plant Store</h1>
+    <ul id="newone">
+        <a  href="{{ url_for('index') }}"><li>Home</li></a>
+        <a  href="{{ url_for('products') }}"><li>Products</li></a>
+        <a  href="{{ url_for('categories') }}"><li>Categories</li></a>
+        <a  href="{{ url_for('feature') }}"><li>Feature</li></a>
+        <a  href="{{ url_for('medical') }}"><li>Medical use</li></a>
+        <a href="{{ url_for('signin') }}"><li onclick="opensign()">Sign in/Up</li>
+    </ul>
+    <div class="mobile-menu">
+        <ul class="mobile-nav">
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>Products</li></a>
+            <a href="#"><li>Categories</li></a>
+            <a href="#"><li>About</li></a>
+            <a href="#"><li>Contact</li></a>
+        </ul>
+    </div>
+    <ul class="itag">
+<a href="{{ url_for('cart') }}"><i class="fa-solid fa-cart-shopping"></i></a>
+<a href="{{ url_for('profile') }}"><i class="fa-solid fa-circle-user"></i></a>
+</ul>
+</div>
+
+        
+            <div class="cart-container">
+                <h2 class="shop" >Your Shopping Cart 🛒</h2>
+        
+                {% if session.get("cart") %}
+                    <div class="cart-items">
+                        {% for item in session["cart"] %}
+                        <div class="cart-item">
+                            <img src="{{ url_for('static', filename=item.image) }}" alt="{{ item.name }}">
+                            <div class="item-details">
+                                <p class="item-name">{{ item.name }}</p>
+                                <p class="item-price">Price: ₹{{ item.price }}</p>
+                            </div>
+                            <button class="remove-item" data-name="{{ item.name }}">Remove</button>
+                        </div>
+                        {% endfor %}
+                    </div>
+        
+                    <a href="{{ url_for('checkout') }}"><button class="checkout-btn">Proceed to Checkout</button></a>
+                {% else %}
+                    <p class="empty-cart">Your cart is empty. Start shopping!</p>
+                {% endif %}
+            </div>
+        
+            <script>
+                document.querySelectorAll('.remove-item').forEach(button => {
+                    button.addEventListener('click', function () {
+                        let productName = this.getAttribute('data-name');
+            
+                        fetch('/remove_from_cart', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ name: productName })
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            alert(data.message);
+                            location.reload(); // Reload cart to reflect changes
+                        })
+                        .catch(error => console.error('Error:', error));
+                    });
+                });
+            </script>
+            
+            <link rel="stylesheet" href="{{ url_for('static', filename='script.js') }}">
+
+    <div class="footer">
+        <h1>CONTACT <br>
+            _________
+        </h1>
+        <h2>csekareem@gmail.com</h2>
+        <div class="icon">
+            <a href="https://github.com/Abdulkareem003"><i class="fa fa-github"></i></a>
+            <a href="www.linkedin.com/in/csekareem"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+            <a href="https://mail.google.com"><i class="fa fa-envelope"></i></a>
+            <a href="https://web.telegram.org"><i class="fa fa-telegram"></i></a>
+        </div>
+        <p>© 2025 E-Farming Store | Grow Smart, Live Healthy 🌿</p>    </div>
+    </div
+    
+</body>
+</html>

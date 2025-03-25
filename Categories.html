@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="ttps://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple">
+    <link rel="stylesheet" href="ttps://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body onscroll="scrolling()">
+    <!--navigation -->
+
+    <div class="nav">
+        <h1>Plant Store</h1>
+    <ul id="newone">
+        <a  href="{{ url_for('index') }}"><li>Home</li></a>
+        <a  href="{{ url_for('products') }}"><li>Products</li></a>
+        <a  href="{{ url_for('categories') }}"><li>Categories</li></a>
+        <a  href="{{ url_for('feature') }}"><li>Feature</li></a>
+        <a  href="{{ url_for('medical') }}"><li>Medical use</li></a>
+        <a href="{{ url_for('signin') }}"><li onclick="opensign()">Sign in/Up</li>
+    </ul>
+    <div class="mobile-menu">
+        <ul class="mobile-nav">
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>Products</li></a>
+            <a href="#"><li>Categories</li></a>
+            <a href="#"><li>About</li></a>
+            <a href="#"><li>Contact</li></a>
+        </ul>
+    </div>
+    <ul class="itag">
+<a href="{{ url_for('cart') }}"><i class="fa-solid fa-cart-shopping"></i></a>
+<a href="{{ url_for('profile') }}"><i class="fa-solid fa-circle-user"></i></a>
+</ul>
+</div>
+
+<div class="cat">
+    <h1>CATEGORIES</h1>
+    <img src="static/images/otherplant.jpg" alt="" height="300px" width="100%">
+</div>
+<div>
+    <center>
+    <h1>Categories of Products</h1></center>
+</div>
+<div class="card-grids">
+    <!-- First Card -->
+     
+    <div class="cards">
+        <div class="label">PLANT STORE</div>
+        <a href="{{ url_for('products')}}#medplant"><img src="static/images/medical.jpg" alt="University information"></a>
+        <div class="card-body">
+            <h3>Medicinal Plants</h3>
+            <p>“To plant a garden is to believe in tomorrow.”</p>
+        </div>
+    </div>
+    <div class="cards">
+        <div class="label">PLANT STORE</div>
+        <a href="{{ url_for('products')}}#decplant"><img src="static/images/potttedplant.jpg" alt="University information"></a>
+        <div class="card-body">
+            <h3>Plants for decorations</h3>
+            <p>“To plant a garden is to believe in tomorrow.”</p>
+        </div>
+    </div>
+    <div class="cards">
+        <div class="label">PLANT STORE</div>
+        <a href="{{ url_for('products')}}"><img src="static/images/plantseed.jpg" alt="University information"></a>
+        <div class="card-body">
+            <h3>Seeds</h3>
+            <p>“To plant a garden is to believe in tomorrow.”</p>
+        </div>
+    </div>
+    <div class="cards">
+        <div class="label">PLANT STORE</div>
+        <a href="{{ url_for('products')}}#cocopeat"><img src="static/images/coco1.jpeg" alt="University information"></a>
+        <div class="card-body">
+            <h3>Coco peats</h3>
+            <p>“To plant a garden is to believe in tomorrow.”</p>
+        </div>
+    </div>
+</div>
+    <div class="footer">
+        <h1>CONTACT <br>
+            _________
+        </h1>
+        <h2>csekareem@gmail.com</h2>
+        <div class="icon">
+            <a href="https://github.com/Abdulkareem003"><i class="fa fa-github"></i></a>
+            <a href="www.linkedin.com/in/csekareem"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+            <a href="https://mail.google.com"><i class="fa fa-envelope"></i></a>
+            <a href="https://web.telegram.org"><i class="fa fa-telegram"></i></a>
+        </div>
+        <p>© 2025 E-Farming Store | Grow Smart, Live Healthy 🌿</p>    </div>
+    </div>
+    
+</body>
+</html>

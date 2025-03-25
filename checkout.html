@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="ttps://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple">
+    <link rel="stylesheet" href="ttps://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body onscroll="scrolling()" style="background-image: url('static/images/backpicture.jpg'); background-position: center; background-size: cover; background-repeat: no-repeat;">
+    <!--navigation -->
+
+    <div class="nav">
+        <h1>Plant Store</h1>
+    <ul id="newone">
+        <a  href="{{ url_for('index') }}"><li>Home</li></a>
+        <a  href="{{ url_for('products') }}"><li>Products</li></a>
+        <a  href="{{ url_for('categories') }}"><li>Categories</li></a>
+        <a  href="{{ url_for('feature') }}"><li>Feature</li></a>
+        <a  href="{{ url_for('medical') }}"><li>Medical use</li></a>
+        <a href="{{ url_for('signin') }}"><li onclick="opensign()">Sign in/Up</li>
+    </ul>
+    <div class="mobile-menu">
+        <ul class="mobile-nav">
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>Products</li></a>
+            <a href="#"><li>Categories</li></a>
+            <a href="#"><li>About</li></a>
+            <a href="#"><li>Contact</li></a>
+        </ul>
+    </div>
+    <ul class="itag">
+<a href="{{ url_for('cart') }}"><i class="fa-solid fa-cart-shopping"></i></a>
+<a href="{{ url_for('profile') }}"><i class="fa-solid fa-circle-user"></i></a>
+</ul>
+</div>
+
+    <div id="check-container" class="check-container">
+    <h2>Checkout</h2>
+
+    <p>Scan the QR code to complete the payment:</p>
+    <img src="{{ qr_path }}" alt="QR Code for Payment">
+
+    <form action="{{ url_for('checkout') }}" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button onclick="checkfunction()" class="confirm-btn" type="submit">Confirm Payment</button>
+    </form>
+</div>
+
+<div id="success">
+    <h2>Your order has been successfully placed! 🎉</h2>
+</div>
+<script>
+    var check=document.getElementById("check-container")
+    var successes=document.getElementById("success")
+    function checkfunction(){
+        check.style.display="none";
+        successes.style.display="block";
+    }
+</script>
+</body>
+</html>

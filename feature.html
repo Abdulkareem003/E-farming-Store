@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicinal Plant Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="ttps://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple">
+    <link rel="stylesheet" href="ttps://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body onscroll="scrolling()">
+    <!--navigation -->
+
+    <div class="nav">
+        <h1>Plant Store</h1>
+    <ul id="newone">
+        <a  href="{{ url_for('index') }}"><li>Home</li></a>
+        <a  href="{{ url_for('products') }}"><li>Products</li></a>
+        <a  href="{{ url_for('categories') }}"><li>Categories</li></a>
+        <a  href="{{ url_for('feature') }}"><li>Feature</li></a>
+        <a  href="{{ url_for('medical') }}"><li>Medical use</li></a>
+        <a href="{{ url_for('signin') }}"><li onclick="opensign()">Sign in/Up</li>
+    </ul>
+    <div class="mobile-menu">
+        <ul class="mobile-nav">
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>Products</li></a>
+            <a href="#"><li>Categories</li></a>
+            <a href="#"><li>About</li></a>
+            <a href="#"><li>Contact</li></a>
+        </ul>
+    </div>
+    <ul class="itag">
+<a href="{{ url_for('cart') }}"><i class="fa-solid fa-cart-shopping"></i></a>
+<a href="{{ url_for('profile') }}"><i class="fa-solid fa-circle-user"></i></a>
+</ul>
+</div>
+    <div class="cat">
+        <h1>FEATURES</h1>
+    </div>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Farming Store - Features</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1">🌿 E-Farming Store - Features</h1>
+    </header>
+
+    <section class="feature">
+        <h2>🌱 Plants for Sale</h2>
+        <p>We offer a variety of plants to enhance your home, health, and environment.</p>
+        <ul>
+            <li><strong>Amla (Indian Gooseberry):</strong> Rich in Vitamin C, boosts immunity, and promotes healthy skin.</li>
+            <li><strong>Hibiscus:</strong> Used in herbal teas, supports hair health, and helps regulate blood pressure.</li>
+            <li><strong>Ashwagandha:</strong> Known for its stress-relief and immunity-boosting properties.</li>
+            <li><strong>Neem:</strong> Powerful antibacterial plant, useful for skin care and oral health.</li>
+            <li><strong>Tulsi (Holy Basil):</strong> Strengthens the immune system and relieves respiratory issues.</li>
+        </ul>
+        <a href="{{ url_for('products')}}#medplant"><button>🛒 Shop Now</button></a>
+    </section>
+    
+    
+    <section class="feature">
+        <h2>🌾 Plant Seeds for Sale</h2>
+        <p>High-quality seeds for home gardening and commercial farming.</p>
+        <ul>
+            <li>🌻 <strong>Vegetable Seeds:</strong> Tomato, Brinjal, Spinach, Carrot, and more.</li>
+            <li>🌸 <strong>Flower Seeds:</strong> Marigold, Rose, Sunflower, and Hibiscus.</li>
+            <li>🌿 <strong>Herbal & Medicinal Seeds:</strong> Tulsi, Aloe Vera, Fenugreek, and Ashwagandha.</li>
+            <li>🌾 <strong>Fruit Seeds:</strong> Watermelon, Mango, Guava, and Amla.</li>
+        </ul>
+        <a href="{{ url_for('products')}}"><button>🛒 Buy Seeds</button></a>
+    </section>
+    
+<section class="feature">
+    <h2>🌿 Coir Pith (Coco Peat)</h2>
+    <p>Organic and eco-friendly growing medium, perfect for improving soil quality.</p>
+    <ul>
+        <li>💧 Retains moisture and improves aeration.</li>
+        <li>🌾 100% organic and sustainable for farming.</li>
+        <li>🌱 Ideal for seed germination and hydroponic farming.</li>
+    </ul>
+    <a href="{{ url_for('products')}}#cocopeat"><button>🛒 Buy Coir Pith</button></a>
+</section>
+<section class="feature">
+    <h2>🌱 Medicinal Plant Uses</h2>
+    <p>Discover how medicinal plants can help improve health naturally.</p>
+    <ul>
+        <li><strong>Aloe Vera:</strong> Skin care & digestion.</li>
+        <li><strong>Tulsi:</strong> Immunity booster & cold relief.</li>
+        <li><strong>Neem:</strong> Anti-bacterial & skin care.</li>
+    </ul>
+</section>
+    
+    <div class="footer">
+        <h1>CONTACT <br>
+            _________
+        </h1>
+        <h2>csekareem@gmail.com</h2>
+        <div class="icon">
+            <a href="https://github.com/Abdulkareem003"><i class="fa fa-github"></i></a>
+            <a href="www.linkedin.com/in/csekareem"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+            <a href="https://mail.google.com"><i class="fa fa-envelope"></i></a>
+            <a href="https://web.telegram.org"><i class="fa fa-telegram"></i></a>
+        </div>
+        <p>©Copyright 2025. All rights reserved</p>
+    </div>
+    <div class="ani">
+        <h1>CONTACT </h1>
+    </div>
+</body>
+</html>

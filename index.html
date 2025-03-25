@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicinal Plant Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="ttps://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+
+</head>
+<body onscroll="scrolling()">
+        <!--navigation -->
+    
+        <div class="nav">
+            <h1>Plant Store</h1>
+        <ul id="newone">
+            <a  href="{{ url_for('index') }}"><li>Home</li></a>
+            <a  href="{{ url_for('products') }}"><li>Products</li></a>
+            <a  href="{{ url_for('categories') }}"><li>Categories</li></a>
+            <a  href="{{ url_for('feature') }}"><li>Feature</li></a>
+            <a  href="{{ url_for('medical') }}"><li>Medical use</li></a>
+            <a href="{{ url_for('signin') }}"><li onclick="opensign()">Sign in/Up</li>
+                <a href="{{ url_for('cart') }}"><i class="fa-solid fa-cart-shopping"></i></a>
+<a href="{{ url_for('profile') }}"><i class="fa-solid fa-circle-user"></i></a>
+        </ul>
+        <div class="mobile-menu">
+            <ul class="mobile-nav">
+                <a  href="{{ url_for('index') }}"><li>Home</li></a>
+            <a  href="{{ url_for('products') }}"><li>Products</li></a>
+            <a  href="{{ url_for('categories') }}"><li>Categories</li></a>
+            <a  href="{{ url_for('feature') }}"><li>Feature</li></a>
+            <a  href="{{ url_for('medical') }}"><li>Medical use</li></a>
+            <a href="{{ url_for('signin') }}"><li onclick="opensign()">Sign in/Up</li>
+                <a href="{{ url_for('cart') }}"><i class="fa-solid fa-cart-shopping"></i></a>
+<a href="{{ url_for('profile') }}"><i class="fa-solid fa-circle-user"></i></a>
+            </ul>
+        </div>
+        <ul class="itag">
+
+                <!-- <i id="bars" onmouseover="show()" onmouseleave="setTimeout(hide,7000)" class="fa-solid fa-bars"></i> -->
+    </ul>
+    </div>
+     
+    <div class=top>
+       <img id="pot" src="static/images/pot.jpg" alt="">
+       <div class="bg"></div>
+       <h1>keep Your <br>
+        Plants Healthy</h1>
+       <p id="para">Plants are really important for the planet and for all living things.<br>
+         Living things need plants to live – they eat them and live in them.<br> Plants help to clean water too.</p>
+        <a href="{{ url_for('products') }}"><button>See more</button></a>
+        <hr>
+        <div class="bg-downpot"></div>
+        <div class="downpot">
+            <img src="static/images/potttedplant.jpg" alt="">
+            <p>Plants are really important for the planet and for all living things.<br></p>
+        </div>
+    </div>
+    <!--for products list-->
+    <div class="products">
+        <h1>PRODUCTS</h1>
+        
+         <!-- Card grid layout -->
+    <div class="card-grid">
+        <!-- First Card -->
+         
+            <div class="card">
+                <div class="label">PLANT STORE</div>
+                <a href="{{ url_for('products')}}#medplant"><img src="static/images/medical.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Plants for Medicine</h3>
+    
+                    <p>“Nature itself is the best physician.”</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="label">PLANT STORE</div>
+                <a href="{{ url_for('products')}}#decplant"><img src="static/images/bolcony.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Plants for decoration</h3>
+    
+                    <p>"Plants do not just decorate a space; they bring it to life."</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="label">PLANT STORE</div>
+                <a href="{{ url_for('products')}}"><img src="static/images/plantfamily.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Other plants</h3>
+    
+                    <p>"He who plants a garden, plants happiness."</p>
+                </div>
+            </div>
+            <h2>COCO PEATS</h2>
+            <!--coir pith-->
+            <div class="card">
+                <div class="label">PLANT STORE</div>
+                <a href="{{ url_for('products')}}#cocopeat"><img src="static/images/pith.jpeg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>COCO PEATS</h3>
+    
+                    <p>“Coco peat: the earth-friendly way to grow.”</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="label">PLANT STORE</div>
+                <a href="{{ url_for('products')}}#pith"><img src="static/images/coirpith.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Coir Fibre</h3>
+    
+                    <p>“Strong roots start with a strong foundation—coconut coir leads the way.”</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="label">PLANT STORE</div>
+                <a href="{{ url_for('products')}}#pith"><img src="static/images/coir-pith-block.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Coir Pith Blocks</h3>
+    
+                    <p>“Grow more, waste less – choose coir.”
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="newh1">
+    <h1>Medicinal Use and Cures</h1>
+</div>
+    <div class="container">
+        <center>
+        <h1>🌿 Medicinal Plant Predictor</h1>
+
+        <input type="text" id="plantInput" placeholder="Enter a plant name...">
+        <button onclick="predictPlant()">Predict</button>
+    </center>
+        
+        <div id="result" class="fade-in">
+            <h2 id="plantName"></h2>
+            <p id="plantInfo"></p>
+            <p id="plantcures"></p>
+            <img id="plantImage" src="" alt="" style="display:none;">
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <div class="footer">
+        <h1>CONTACT <br>
+            _________
+        </h1>
+        <h2>csekareem@gmail.com</h2>
+        <div class="icon">
+            <a href="https://github.com/Abdulkareem003"><i class="fa fa-github"></i></a>
+            <a href="www.linkedin.com/in/csekareem"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+            <a href="https://mail.google.com"><i class="fa fa-envelope"></i></a>
+            <a href="https://web.telegram.org"><i class="fa fa-telegram"></i></a>
+        </div>
+        <p>© 2025 E-Farming Store | Grow Smart, Live Healthy 🌿</p>    </div>
+</body>
+</html>

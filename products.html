@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    <link rel="stylesheet" href="ttps://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple">
+    <link rel="stylesheet" href="ttps://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body onscroll="scrolling()">
+    <!--navigation -->
+
+    <div class="nav">
+        <h1>Plant Store</h1>
+    <ul id="newone">
+        <a  href="{{ url_for('index') }}"><li>Home</li></a>
+        <a  href="{{ url_for('products') }}"><li>Products</li></a>
+        <a  href="{{ url_for('categories') }}"><li>Categories</li></a>
+        <a  href="{{ url_for('feature') }}"><li>Feature</li></a>
+        <a  href="{{ url_for('medical') }}"><li>Medical use</li></a>
+        <a href="{{ url_for('signin') }}"><li onclick="opensign()">Sign in/Up</li>
+    </ul>
+    <div class="mobile-menu">
+        <ul class="mobile-nav">
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>Products</li></a>
+            <a href="#"><li>Categories</li></a>
+            <a href="#"><li>About</li></a>
+            <a href="#"><li>Contact</li></a>
+        </ul>
+    </div>
+    <ul class="itag">
+<a href="{{ url_for('cart') }}"><i class="fa-solid fa-cart-shopping"></i></a>
+<a href="{{ url_for('profile') }}"><i class="fa-solid fa-circle-user"></i></a>
+</ul>
+</div>
+    </div>
+    <div id="product" class="prs">
+        <h1>PRODUCTS</h1>
+        <!-- <img src="static/images/otherplant.jpg" alt="" height="300px" width="100%"> -->
+    </div>
+    <div id="medplant" >
+        <center>
+        <h1 >Product List</h1></center>
+    </div>
+    <!--  -->
+    <div class="card-grids">
+        <!-- First Card -->
+         
+        <div class="cards">
+            <div class="label">PLANT STORE</div>
+            <a href="#"><img src="{{ url_for('static', filename='images/amla.png') }}" alt="Amla Plant"></a>
+            <div class="card-body">
+                <h3>Amla</h3>
+                <p>“To plant a garden is to believe in tomorrow.”</p>
+                <p>Price : 100</p>
+                <button class="buy-now" data-name="Amla" data-price="100" data-image="amla.png">Buy Now</button>
+            </div>
+        </div>
+        
+        <!-- Add JavaScript at the bottom of the page -->
+       
+        
+            <div class="cards">
+                <div class="label">PLANT STORE</div>
+                <a href="#"><img src="static/images/aloevera.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Aloevera</h3>
+                    <p>“Nature itself is the best physician.”</p>
+                    <p>Price : 100</p>
+                    <button class="buy-now" data-name="Aloevera" data-price="100" data-image="aloeplant.jpg">Buy Now</button>                </div>
+            </div>
+            <div class="cards">
+                <div class="label">PLANT STORE</div>
+                <a href="#"><img src="static/images/aswagandha.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Aswagandha</h3>
+                    <p>"Boost your strength with aswagandha"</p>
+                    <p>Price : 100</p>
+                    <button class="buy-now" data-name="Aswagandha" data-price="100" data-image="aswagandha.jpg">Buy Now</button>         
+                </div>
+            </div>
+            
+            <!--coir pith-->
+            <div class="cards">
+                <div class="label">PLANT STORE</div>
+                <a href="#"><img src="static/images/tulasi plant.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Tulasi</h3>
+                    <p>“To plant a garden is to believe in tomorrow.”</p>
+                    <p>Price : 100</p>
+                    <button class="buy-now" data-name="Tulasi" data-price="100" data-image="tulasi plant.jpg">Buy Now</button>                   
+                </div>
+            </div>
+            <div class="cards">
+                <div class="label">PLANT STORE</div>
+                <a href="#"><img src="static/images/curryleaves.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Curry Leaves</h3>
+                    <p>“Strong roots start with a strong foundation.”</p>
+                    <p>Price : 100</p>
+                    <button class="buy-now" data-name="Curry Leaves" data-price="100" data-image="curryleaves.jpg">Buy Now</button>      
+                           </div>
+            </div>
+            <div class="cards">
+                <div class="label">PLANT STORE</div>
+                <a href="#"><img src="static/images/vethala.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Betal</h3>
+                    <p>“Like the betel leaf, let your life be full of flavor, strength, and tradition.”</p>
+                    <p>Price : 100</p>
+                    <button class="buy-now" data-name="Betal" data-price="100" data-image="vethala.jpg" >Buy Now</button>           
+                     </div>
+            </div>
+            <div class="cards">
+                <div class="label">PLANT STORE</div>
+                <a href="#"><img src="static/images/brahmi.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Brahmi</h3>
+                    <p>“Brahmi—nature’s gift for a sharper mind and a healthier soul.”
+                    </p>
+                    <p>Price : 100</p>
+                    <button class="buy-now" data-name="Brahmi" data-price="100" data-image="brahmi.jpg" >Buy Now</button>           
+                
+                </div>
+            </div>
+            <div class="cards">
+                <div class="label">PLANT STORE</div>
+                <a href="#"><img src="static/images/casterplant.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Caster</h3>
+                    <p>“From tiny seeds grow mighty cures—nature’s power in the caster plant.”</p>
+                    <p>Price : 100</p>
+                    <button class="buy-now" data-name="Caster" data-price="100" data-image="casterplant.jpg" >Buy Now</button>           
+                
+                </div>
+            </div>
+            <div class="cards">
+                <div class="label">PLANT STORE</div>
+                <a href="#"><img src="static/images/dodda.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Doddapatra</h3>
+                    <p>“Doddapatre—nature’s healing touch, soothing coughs and hearts alike.”</p>
+                    <p>Price : 100</p>
+                    <button class="buy-now" data-name="Doddapatra" data-price="100" data-image="dodda.jpg" >Buy Now</button>           
+                
+                </div>
+            </div>
+            <div class="cards">
+                <div class="label">PLANT STORE</div>
+                <a href="#"><img src="static/images/mango.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Mango</h3>
+                    <p>“The mango tree—where sweetness begins and memories grow.”</p>
+                    <p>Price : 100</p>
+                    <button class="buy-now" data-name="Mango" data-price="100" data-image="mango.jpg" >Buy Now</button>           
+                
+                </div>
+            </div>
+            <div class="cards">
+                <div class="label">PLANT STORE</div>
+                <a href="#"><img src="static/images/insulin.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Insulin</h3>
+                    <p>“The insulin plant—nature’s remedy for a balanced life.”</p>
+                    <p>Price : 100</p>
+                    <button class="buy-now" data-name="Insulin" data-price="100" data-image="insulin.jpg" >Buy Now</button>           
+                
+                </div>
+            </div>
+            <div class="cards">
+                <div class="label">PLANT STORE</div>
+                <a href="#"><img src="static/images/henna.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Henna</h3>
+                    <p>“Henna—nature’s art, coloring hands and hearts with tradition.”</p>
+                    <p>Price : 100</p>
+                    <button class="buy-now" data-name="Henna" data-price="100" data-image="henna.jpg" >Buy Now</button>           
+                
+                </div>
+            </div>
+            <div class="cards">
+                <div class="label">PLANT STORE</div>
+                <a href="#"><img src="static/images/lemon.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Lemon</h3>
+                    <p>“To plant a garden is to believe in tomorrow.”</p>
+                    <p>Price : 100</p>
+                    <button class="buy-now" data-name="Lemon" data-price="100" data-image="lemin.jpg" >Buy Now</button>           
+                
+                </div>
+            </div>
+            <div id="decplant" class="cards">
+                <div class="label">PLANT STORE</div>
+                <a href="#"><img src="static/images/jasmine.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Jasmine</h3>
+                    <p>“Jasmine—nature’s poetry, written in fragrance.”</p>
+                    <p>Price : 100</p>
+                    <button class="buy-now" data-name="Jasmine" data-price="100" data-image="jasmine.jpg" >Buy Now</button>           
+                
+                </div>
+            </div>
+            <div class="cards">
+                <div class="label">PLANT STORE</div>
+                <a href="#"><img src="static/images/honge.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Honge</h3>
+                    <p>“Honge—nature’s shield, offering shade, strength, and sustainability.”</p>
+                    <p>Price : 100</p>
+                    <button class="buy-now" data-name="Honge" data-price="100" data-image="honge.jpg" >Buy Now</button>           
+                
+                </div>
+            </div>
+            <div class="cards">
+                <div class="label">PLANT STORE</div>
+                <a href="#"><img src="static/images/ganike.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Ganike</h3>
+                    <p>“Ganike—nature’s silent healer, nurturing wellness with every leaf.”</p>
+                    <p>Price : 100</p>
+                    <button class="buy-now" data-name="Ganike" data-price="100" data-image="ganike.jpg" >Buy Now</button>           
+                
+                </div>
+            </div>
+            <div class="cards">
+                <div class="label">PLANT STORE</div>
+                <a href="#"><img src="static/images/gauva.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Gauva</h3>
+                    <p>“To plant a garden is to believe in tomorrow.”</p>
+                    <p>Price : 100</p>
+                    <button class="buy-now" data-name="Gauva" data-price="100" data-image="gauva.jpg" >Buy Now</button>           
+                
+                </div>
+            </div>
+            <div class="cards">
+                <div class="label">PLANT STORE</div>
+                <a href="#"><img src="static/images/geranium.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Geranium</h3>
+                    <p>“Geranium—nature’s burst of color and a breath of fresh fragrance.”
+                    </p>
+                    <p>Price : 100</p>
+                    <button class="buy-now" data-name="Geranium" data-price="100" data-image="geranium.jpg" >Buy Now</button>           
+                
+                </div>
+            </div>
+            <div class="cards">
+                <div class="label">PLANT STORE</div>
+                <a href="#"><img src="static/images/hibiscus.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Hibiscus  </h3>
+                    <p>“Hibiscus—nature’s beauty, blooming with grace and healing with power.”</p>
+                    <p>Price : 100</p>
+                    <button class="buy-now" data-name="Henna" data-price="100" data-image="hibiscus.jpg" >Buy Now</button>           
+                
+                </div>
+            </div>
+            <div class="cards">
+                <div class="label">PLANT STORE</div>
+                <a href="#"><img src="static/images/pepper.jpeg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>pepper</h3>
+                    <p>“Pepper—small in size, bold in flavor, and rich in tradition.”</p>
+                    <p>Price : 100</p>
+                    <button class="buy-now" data-name="pepper" data-price="100" data-image="pepper.jpg" >Buy Now</button>           
+                
+                </div>
+            </div>
+            <div class="cards">
+                <div class="label">PLANT STORE</div>
+                <a href="#"><img src="static/images/nooni.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Nooni</h3>
+                    <p>“Nooni—nature’s gift of wellness, nourishing body and soul.”
+                    </p>
+                    <p>Price : 100</p>
+                    <button class="buy-now" data-name="Nooni" data-price="100" data-image="nooni.jpg" >Buy Now</button>           
+                
+                </div>
+            </div>
+            <div class="cards">
+                <div class="label">PLANT STORE</div>
+                <a href="#"><img src="static/images/bamboo.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Bamboo</h3>
+                    <p>"Bamboo—strong yet flexible, a symbol of resilience and growth."</p>
+                    <p>Price : 100</p>
+                    <button class="buy-now" data-name="Bamboo" data-price="100" data-image="bamboo.jpg" >Buy Now</button>           
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="cocopeat" >
+        <center>
+        <h1>Coco Peats</h1></center>
+    </div>
+    <!--  -->
+    <div class="card-grids">
+        <!-- First Card -->
+         
+        <div class="cards">
+            <div class="label">PLANT STORE</div>
+            <a href="#"><img src="static/images/pith.jpeg" alt="University information"></a>
+            <div class="card-body">
+                <h3>coco peats</h3>
+
+                <p>“To plant a garden is to believe in tomorrow.”</p>
+                <p>Price : 100</p>
+                <button class="buy-now" data-name="coco peats" data-price="100" data-image="pith.jpeg" >Buy Now</button>           
+            
+            </div>
+        </div>
+            <div class="cards">
+                <div class="label">PLANT STORE</div>
+                <a href="#"><img src="static/images/coco.avif" alt="University information"></a>
+                <div class="card-body">
+                    <h3>Dry coco peat</h3>
+                    <p>“Coco Peat—nature’s way of nurturing roots for a greener tomorrow.”</p>
+                    <p>Price : 100</p>
+                    <button class="buy-now" data-name="Dry coco peat" data-price="100" data-image="coco.avif" >Buy Now</button>           
+                
+                </div>
+            </div>
+            <div id="pith" class="cards">
+                <div class="label">PLANT STORE</div>
+                <a href="#"><img src="static/images/coco1.jpeg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>coir pith pack</h3>
+                    <p>"Coir Pith—sustainability at its roots, nurturing growth the natural way."</p>
+                    <p>Price : 100</p>
+                    <button class="buy-now" data-name="coir pith pack" data-price="100" data-image="coco1.jpeg" >Buy Now</button>           
+                
+                </div>
+            </div>
+            <div class="cards">
+                <div class="label">PLANT STORE</div>
+                <a href="#"><img src="static/images/coir-pith-block.jpg" alt="University information"></a>
+                <div class="card-body">
+                    <h3>coir pith blocks</h3>
+                    <p>"Grow more, waste less – choose coir."</p>
+                    <p>Price : 100</p>
+                    <button class="buy-now" data-name="coir pith blocks" data-price="100" data-image="coir-pith-block.jpg" >Buy Now</button>           
+                
+                </div>
+            </div>
+     </div>
+     <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    <div class="footer">
+        <h1>CONTACT <br>
+            _________
+        </h1>
+        <h2>csekareem@gmail.com</h2>
+        <div class="icon">
+            <a href="https://github.com/Abdulkareem003"><i class="fa fa-github"></i></a>
+            <a href="www.linkedin.com/in/csekareem"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+            <a href="https://mail.google.com"><i class="fa fa-envelope"></i></a>
+            <a href="https://web.telegram.org"><i class="fa fa-telegram"></i></a>
+        </div>
+        <p>© 2025 E-Farming Store | Grow Smart, Live Healthy 🌿</p>    </div>
+    </div>
+    <div class="ani">
+        <h1>CONTACT </h1>
+    </div>
+
+
+    
+    
+</body>
+</html>
